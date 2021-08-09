@@ -64,5 +64,19 @@ let main argv =
         printfn ""
     )
     printfn ""
+    
+    let groupByStudCount =
+        bricks
+        |> Array.groupBy (fun b -> b.StudColumns * b.StudRows)
+    
+    groupByStudCount
+    |> Array.sortByDescending fst
+    |> Array.iter (fun (studCount, bricks) ->
+        printfn "%d stud:" studCount
+        bricks
+        |> Array.iter Brick.printConsole
+        printfn ""
+    )
+    printfn ""
 
     0 

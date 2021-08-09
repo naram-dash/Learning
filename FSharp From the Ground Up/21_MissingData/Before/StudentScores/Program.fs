@@ -2,42 +2,59 @@
 open System.IO
 
 type Student =
-    {
-        Name : string
-        Id : string
-        MeanScore : float
-        MinScore : float
-        MaxScore : float
-    }
+    { Name: string
+      Id: string
+      MeanScore: float
+      MinScore: float
+      MaxScore: float }
+
+module Float =
+    let tryFromString s =
+        if s = "N/A" then
+            None
+        else
+            Some(float s)
+
+    let fromStringOr num s =
+        s |> tryFromString |> Option.defaultValue num
 
 module Student =
 
-    let fromString (s : string) =
+    let fromString (s: string) =
         let elements = s.Split('\t')
         let name = elements.[0]
-        let id = elements.[1]    
+        let id = elements.[1]
+
         let scores =
             elements
             |> Array.skip 2
-            |> Array.map float
+            |> Array.map (Float.fromStringOr 50.0)
+        // Applies the given function to each element of the array. Returns the array comprised of the results "x" for each element where the function returns Some(x)
+
         let meanScore = scores |> Array.average
         let minScore = scores |> Array.min
         let maxScore = scores |> Array.max
-        {
-            Name = name
-            Id = id
-            MeanScore = meanScore
-            MinScore = minScore
-            MaxScore = maxScore
-        }        
 
-    let printSummary (student : Student) =
-        printfn "%s\t%s\t%0.1f\t%0.1f\t%0.1f" student.Name student.Id student.MeanScore student.MinScore student.MaxScore
+        { Name = name
+          Id = id
+          MeanScore = meanScore
+          MinScore = minScore
+          MaxScore = maxScore }
 
-let summarize filePath = 
+    let printSummary (student: Student) =
+        printfn
+            "%s\t%s\t%0.1f\t%0.1f\t%0.1f"
+            student.Name
+            student.Id
+            student.MeanScore
+            student.MinScore
+            student.MaxScore
+
+let summarize filePath =
     let rows = File.ReadAllLines filePath
     let studentCount = (rows |> Array.length) - 1
     printfn "Student count: %i" studentCount
+
     rows
     |> Array.skip 1
     // Convert each line to a Student instance
@@ -51,6 +68,7 @@ let summarize filePath =
 let main argv =
     if argv.Length = 1 then
         let filePath = argv.[0]
+
         if File.Exists filePath then
             printfn "Processing %s" filePath
             summarize filePath

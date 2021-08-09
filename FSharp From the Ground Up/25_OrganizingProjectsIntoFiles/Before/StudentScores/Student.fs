@@ -2,7 +2,7 @@ namespace StudentScores
 
 type Student =
     { Surname: string
-      GivenName: string
+      Givenname: string
       Id: string
       MeanScore: float
       MinScore: float
@@ -25,15 +25,14 @@ module Student =
         let scores =
             elements
             |> Array.skip 2
-            |> Array.map TestResult.fromString
-            |> Array.choose TestResult.tryEffectiveScore
+            |> Array.map (Float.fromStringOr 50.0)
 
         let meanScore = scores |> Array.average
         let minScore = scores |> Array.min
         let maxScore = scores |> Array.max
 
         { Surname = sur
-          GivenName = given
+          Givenname = given
           Id = id
           MeanScore = meanScore
           MinScore = minScore
@@ -43,7 +42,7 @@ module Student =
         printfn
             "%s, %s\t%s\t%0.1f\t%0.1f\t%0.1f"
             student.Surname
-            student.GivenName
+            student.Givenname
             student.Id
             student.MeanScore
             student.MinScore

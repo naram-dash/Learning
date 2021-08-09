@@ -6,21 +6,26 @@ open StudentScores
 let main argv =
     if argv.Length = 1 then
         let filePath = argv.[0]
+
         if File.Exists filePath then
             printfn "Processing %s" filePath
+
             try
                 Summary.summarize filePath
                 0
             with
             | :? FormatException as e ->
+                // :? is type test operator
                 printfn "Error: %s" e.Message
-                printfn "The file was not in the expected format."
+                printfn "The file was not in the expected format"
                 1
             | :? IOException as e ->
+                // :? is type test operator
                 printfn "Error: %s" e.Message
-                printfn "If the file is open in another program, please close it."
-                2     
-            | _ as e ->
+                printfn "The file is open in another program, please close it"
+                2
+            | e ->
+                // :? is type test operator
                 printfn "Unexpected error: %s" e.Message
                 3
         else
