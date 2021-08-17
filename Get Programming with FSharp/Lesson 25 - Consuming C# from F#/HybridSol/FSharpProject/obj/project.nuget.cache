@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "lm5JgLmUYQ+tNRuvJf/WgVnBul7I3bttunHaqZQfKm/XF1ALtXlLTwDvS/kSWWKYy+1R2CtceyZrPzRoDuoHPA==",
+  "success": true,
+  "projectFilePath": "E:\\Projects\\learning\\Get Programming with FSharp\\Lesson 25 - Consuming C# from F#\\HybridSol\\FSharpProject\\FSharpProject.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\juho_\\.nuget\\packages\\fsharp.core\\5.0.0\\fsharp.core.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

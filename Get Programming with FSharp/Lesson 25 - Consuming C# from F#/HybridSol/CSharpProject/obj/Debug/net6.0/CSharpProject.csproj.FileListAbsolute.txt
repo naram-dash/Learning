@@ -1,0 +1,13 @@
+E:\Projects\learning\Get Programming with FSharp\Lesson 25 - Consuming C# from F#\HybridSol\CSharpProject\bin\Debug\net6.0\CSharpProject.deps.json
+E:\Projects\learning\Get Programming with FSharp\Lesson 25 - Consuming C# from F#\HybridSol\CSharpProject\bin\Debug\net6.0\CSharpProject.dll
+E:\Projects\learning\Get Programming with FSharp\Lesson 25 - Consuming C# from F#\HybridSol\CSharpProject\bin\Debug\net6.0\CSharpProject.pdb
+E:\Projects\learning\Get Programming with FSharp\Lesson 25 - Consuming C# from F#\HybridSol\CSharpProject\obj\Debug\net6.0\CSharpProject.csproj.AssemblyReference.cache
+E:\Projects\learning\Get Programming with FSharp\Lesson 25 - Consuming C# from F#\HybridSol\CSharpProject\obj\Debug\net6.0\CSharpProject.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\learning\Get Programming with FSharp\Lesson 25 - Consuming C# from F#\HybridSol\CSharpProject\obj\Debug\net6.0\CSharpProject.AssemblyInfoInputs.cache
+E:\Projects\learning\Get Programming with FSharp\Lesson 25 - Consuming C# from F#\HybridSol\CSharpProject\obj\Debug\net6.0\CSharpProject.AssemblyInfo.cs
+E:\Projects\learning\Get Programming with FSharp\Lesson 25 - Consuming C# from F#\HybridSol\CSharpProject\obj\Debug\net6.0\CSharpProject.ImplicitNamespaceImports.cs
+E:\Projects\learning\Get Programming with FSharp\Lesson 25 - Consuming C# from F#\HybridSol\CSharpProject\obj\Debug\net6.0\CSharpProject.csproj.CoreCompileInputs.cache
+E:\Projects\learning\Get Programming with FSharp\Lesson 25 - Consuming C# from F#\HybridSol\CSharpProject\obj\Debug\net6.0\CSharpProject.dll
+E:\Projects\learning\Get Programming with FSharp\Lesson 25 - Consuming C# from F#\HybridSol\CSharpProject\obj\Debug\net6.0\refint\CSharpProject.dll
+E:\Projects\learning\Get Programming with FSharp\Lesson 25 - Consuming C# from F#\HybridSol\CSharpProject\obj\Debug\net6.0\CSharpProject.pdb
+E:\Projects\learning\Get Programming with FSharp\Lesson 25 - Consuming C# from F#\HybridSol\CSharpProject\obj\Debug\net6.0\ref\CSharpProject.dll
