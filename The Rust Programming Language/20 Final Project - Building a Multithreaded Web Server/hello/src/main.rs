@@ -13,6 +13,7 @@ fn main() {
 
     // incoming을 통해 연결에 대한 "시도"를 순회한다.
     for stream in listener.incoming() {
+        // for stream in listener.incoming().take(2) {
         let stream = stream.unwrap();
 
         pool.excute(|| {
