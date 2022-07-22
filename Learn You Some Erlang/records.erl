@@ -1,6 +1,7 @@
 -module(records).
 
 -compile(export_all).
+-include("records.hrl").
 
 % after = is default value
 -record(robot, {name, type = industrial, hobbies, details = []}).
@@ -27,3 +28,11 @@ adult_section(U = #user{}) when U#user.age >= 18 ->
 adult_section(_) ->
   %% redirect to sesame street site
   forbidden.
+
+
+repairman(Rob) ->
+  Details = Rob#robot.details,
+  NewRob = Rob#robot{details = ["Repaired by repairman" | Details]},
+  {repaired, NewRob}.
+
+included() -> #included{some_field="Some value"}.
