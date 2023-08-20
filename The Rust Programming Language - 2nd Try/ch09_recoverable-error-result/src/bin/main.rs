@@ -1,4 +1,4 @@
-use std::{fs, fs::File, io::{self, Read}, io::ErrorKind};
+use std::{fs, fs::File, io, io::{Read, ErrorKind}};
 
 fn main() {
     println!("Hello, world!");
