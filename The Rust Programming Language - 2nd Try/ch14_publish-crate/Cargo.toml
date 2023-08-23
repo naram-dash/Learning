@@ -1,6 +1,6 @@
 [package]
 name = "dontuse-this-002"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "i want to be a paided rust programmer!"
 repository = "https://github.com/naramdash/learning"
